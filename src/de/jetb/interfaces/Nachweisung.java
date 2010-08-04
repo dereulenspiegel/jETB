@@ -1,7 +1,14 @@
 package de.jetb.interfaces;
 
 import java.util.Iterator;
-
+/**
+ * Dieses Interface soll beschreiben wie die Nachweisung funktioniert. Es darf
+ * nur möglich sein Nachrichten hinzuzufügen. Ein Entfernen von Nachrichten ist
+ * weder vorgesehen noch gewünscht. Es gibt lediglich funktionen zum auslesen
+ * der Nachweisung.
+ *
+ * @author Till Klocke
+ */
 public interface Nachweisung {
 	
 	public void addMessage(Message message);

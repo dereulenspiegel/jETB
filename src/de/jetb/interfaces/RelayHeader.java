@@ -3,6 +3,12 @@ package de.jetb.interfaces;
 import de.jetb.enums.Media;
 import de.jetb.util.TacticalDate;
 
+/**
+ * RelayHeader ersetzen den Meldekopf bei Nachrichten. Ein RelayHeader enthält
+ * die gleichen Informationen wie ein Meldekopf, allerdings darf ein RelayHeader
+ * mehrfach in einer Nachricht vorkommen.
+ * @author Till Klocke
+ */
 public interface RelayHeader {
 	
 	public Media getMedia();
@@ -15,7 +21,5 @@ public interface RelayHeader {
 	public void setSent();
 	public void setRadioOperator(String operator);
 	public void setTimeOfEvent(TacticalDate date);
-	
-	public String toXML();
 
 }

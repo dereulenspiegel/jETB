@@ -30,10 +30,20 @@ public class Message implements de.jetb.interfaces.Message {
 		this.body = body;
 		generateMessageID();
 	}
+
+        public Message(String sender, String receiver, String body, String messageId){
+            this(sender,receiver,body);
+            this.messageID = messageId;
+        }
 	
 	public Message(String sender, String receiver, String body, TacticalDate creationTime){
 		this(sender,receiver,body);
 		this.creationTime = creationTime;
+	}
+
+        public Message(String sender, String receiver, String body, TacticalDate creationTime, String messageId){
+		this(sender, receiver, body, creationTime);
+		this.messageID = messageId;
 	}
 
 	@Override

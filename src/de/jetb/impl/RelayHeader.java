@@ -64,13 +64,6 @@ public class RelayHeader implements de.jetb.interfaces.RelayHeader {
 	@Override
 	public void setTimeOfEvent(TacticalDate date) {
 		this.timeOfEvent = date;
-
-	}
-
-	@Override
-	public String toXML() {
-		// TODO Generate valid XML
-		return null;
 	}
 
 }
