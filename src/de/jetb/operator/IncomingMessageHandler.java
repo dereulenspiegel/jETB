@@ -7,17 +7,16 @@ package de.jetb.operator;
 
 import de.jetb.enums.Priority;
 import de.jetb.interfaces.Message;
+import de.jetb.interfaces.NetworkInterface;
 import java.util.ArrayList;
 import javax.swing.AbstractListModel;
-import org.jivesoftware.smack.PacketListener;
-import org.jivesoftware.smack.packet.Packet;
 
 /**
  *
  * @author Till Klocke
  */
 public class IncomingMessageHandler extends AbstractListModel
-        implements PacketListener{
+        implements NetworkInterface.IncomingMessageListener{
 
     //Einfachnachrichten
     private ArrayList<Message> normalMessages = new ArrayList<Message>();
@@ -90,8 +89,8 @@ public class IncomingMessageHandler extends AbstractListModel
         }
     }
 
-    public void processPacket(Packet pcaket) {
-        throw new UnsupportedOperationException("Not supported yet.");
+    public void messageReceived(Message message) {
+        addMessage(message);
     }
 
 }

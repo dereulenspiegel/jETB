@@ -1,6 +1,7 @@
 package de.jetb.util;
 
 import java.io.UnsupportedEncodingException;
+import java.net.UnknownHostException;
 import java.security.MessageDigest;
 import java.security.NoSuchAlgorithmException;
 
@@ -31,6 +32,17 @@ public class Utils {
 		md.update(text.getBytes("iso-8859-1"), 0, text.length());
 		sha1hash = md.digest();
 		return convertToHex(sha1hash);
+    }
+
+    public static String generateServiceName(String prefix){
+        String hostName = null;
+        try {
+            hostName = java.net.InetAddress.getLocalHost().getHostName();
+        } catch (UnknownHostException ex) {
+            hostName = "jetb";
+        }
+
+        return prefix+"@"+hostName;
     }
 
 }

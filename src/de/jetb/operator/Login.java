@@ -13,6 +13,7 @@ package de.jetb.operator;
 
 import de.jetb.connection.PeerManager;
 import de.jetb.connection.XMPPRunner;
+import de.jetb.enums.Roles;
 import java.net.UnknownHostException;
 import java.util.logging.Level;
 import java.util.logging.Logger;
